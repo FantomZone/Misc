@@ -1,0 +1,82 @@
+{
+  "flowRules" : [
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.google.com",
+      "destPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.twitchy.com",
+      "destPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "192.168.50.151",
+      "destPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.facebook.com",
+      "destPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.filterrules.com",
+      "destPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "*",
+      "destPort" : 0,
+      "action" : "block"
+    }
+  ],
+  "packetRules" : [
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.google.com",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "192.168.50.151",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.twitchy.com",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "www.facebook.com",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "block"
+    }
+  ]
+}
