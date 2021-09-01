@@ -37,7 +37,7 @@
       "action" : "block"
     }
   ],
-  "packetRules" : [
+  "socketRules" : [
     {
       "sourceApp" : "*",
       "destIp" : "www.google.com",
