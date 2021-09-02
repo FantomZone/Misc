@@ -34,7 +34,7 @@
       "sourceApp" : "*",
       "destIp" : "*",
       "destPort" : 0,
-      "action" : "block"
+      "action" : "drop"
     }
   ],
   "socketRules" : [
@@ -76,7 +76,7 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "block"
+      "action" : "drop"
     }
   ]
 }
