@@ -72,6 +72,22 @@
     },
     {
       "sourceApp" : "*",
+      "destIp" : "13.249.139.42",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "drop"
+    },
+    {
+      "sourceApp" : "*",
+      "destIp" : "13.249.139.42",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action": "drop"
+    },
+    {
+      "sourceApp" : "*",
       "destIp" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
