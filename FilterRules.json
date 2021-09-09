@@ -2,45 +2,47 @@
   "flowRules" : [
     {
       "sourceApp" : "*",
-      "destIp" : "www.google.com",
-      "destPort" : 0,
+      "urlHost" : "www.google.com",
+      "urlPort" : 0,
       "action" : "allow"
     },
     {
       "sourceApp" : "*",
-      "destIp" : "www.twitchy.com",
-      "destPort" : 0,
+      "urlHost" : "www.twitchy.com",
+      "urlPort" : 0,
       "action" : "allow"
     },
     {
       "sourceApp" : "*",
-      "destIp" : "192.168.50.151",
-      "destPort" : 0,
+      "urlHost" : "192.168.50.151",
+      "urlPort" : 0,
       "action" : "allow"
     },
     {
       "sourceApp" : "*",
-      "destIp" : "www.facebook.com",
-      "destPort" : 0,
+      "urlHost" : "www.facebook.com",
+      "urlPort" : 0,
       "action" : "allow"
     },
     {
       "sourceApp" : "*",
-      "destIp" : "www.filterrules.com",
-      "destPort" : 0,
+      "urlHost" : "www.filterrules.com",
+      "urlPort" : 0,
       "action" : "allow"
     },
     {
       "sourceApp" : "*",
-      "destIp" : "*",
-      "destPort" : 0,
+      "urlHost" : "*",
+      "urlPort" : 0,
       "action" : "drop"
     }
   ],
   "socketRules" : [
     {
       "sourceApp" : "*",
-      "destIp" : "www.google.com",
+      "remoteHost" : "www.google.com",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -48,7 +50,9 @@
     },
     {
       "sourceApp" : "*",
-      "destIp" : "192.168.50.151",
+      "remoteHost" : "192.168.50.151",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -56,7 +60,9 @@
     },
     {
       "sourceApp" : "*",
-      "destIp" : "www.twitchy.com",
+      "remoteHost" : "www.twitchy.com",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -64,7 +70,9 @@
     },
     {
       "sourceApp" : "*",
-      "destIp" : "www.facebook.com",
+      "remoteHost" : "www.facebook.com",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -72,7 +80,9 @@
     },
     {
       "sourceApp" : "*",
-      "destIp" : "13.249.139.42",
+      "remoteHost" : "13.249.139.42",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -80,7 +90,9 @@
     },
     {
       "sourceApp" : "*",
-      "destIp" : "13.249.139.42",
+      "remoteHost" : "13.249.139.42",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -88,7 +100,9 @@
     },
     {
       "sourceApp" : "*",
-      "destIp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
