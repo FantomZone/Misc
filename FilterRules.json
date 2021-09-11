@@ -34,7 +34,7 @@
       "sourceApp" : "*",
       "urlHost" : "*",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     }
   ],
   "socketRules" : [
