@@ -114,8 +114,8 @@
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
-      "socketType" : 1,
-      "socketProtocol" : 6,
+      "socketType" : 2,
+      "socketProtocol" : 17,
       "action" : "allow"
     },
     {
