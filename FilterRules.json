@@ -123,9 +123,9 @@
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
-      "socketFamily" : *,
-      "socketType" : *,
-      "socketProtocol" : *,
+      "socketFamily" : 0,
+      "socketType" : 0,
+      "socketProtocol" : 0,
       "action" : "allow"
     }
   ]
