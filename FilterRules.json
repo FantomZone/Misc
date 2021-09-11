@@ -106,7 +106,27 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "drop"
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : *,
+      "socketType" : *,
+      "socketProtocol" : *,
+      "action" : "allow"
     }
   ]
 }
