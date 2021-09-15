@@ -36,6 +36,27 @@
       "action" : "drop"
     },
     {
+      "comment" : "Chrome if it gets to facebook.com then goes to m.facebook.com",
+      "sourceApp" : "*",
+      "urlHost" : "m.facebook.com",
+      "urlPort" : 0,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Shorthand to block all youtube",
+      "sourceApp" : "*",
+      "urlHost" : "www.youtube.com",
+      "urlPort" : 0,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Shorthand to block all youtube",
+      "sourceApp" : "*",
+      "urlHost" : "youtube.com",
+      "urlPort" : 0,
+      "action" : "drop"
+    },
+    {
       "sourceApp" : "*",
       "urlHost" : "www.filterrules.com",
       "urlPort" : 0,
