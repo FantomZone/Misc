@@ -26,7 +26,7 @@
       "sourceApp" : "*",
       "urlHost" : "www.facebook.com",
       "urlPort" : 0,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
       "sourceApp" : "*",
