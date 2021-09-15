@@ -29,6 +29,13 @@
       "action" : "drop"
     },
     {
+      "comment" : "Chrome goes to facebook.com no matter what",
+      "sourceApp" : "*",
+      "urlHost" : "facebook.com",
+      "urlPort" : 0,
+      "action" : "drop"
+    },
+    {
       "sourceApp" : "*",
       "urlHost" : "www.filterrules.com",
       "urlPort" : 0,
