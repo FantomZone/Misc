@@ -8,18 +8,21 @@
       "action" : "allow"
     },
     {
+      "comment" : "Allow twitchy web access",
       "sourceApp" : "*",
       "urlHost" : "www.twitchy.com",
       "urlPort" : 0,
       "action" : "allow"
     },
     {
+      "comment" : "Allow private website access",
       "sourceApp" : "*",
       "urlHost" : "192.168.50.151",
       "urlPort" : 0,
       "action" : "allow"
     },
     {
+      "comment" : "Allow facebook website access",
       "sourceApp" : "*",
       "urlHost" : "www.facebook.com",
       "urlPort" : 0,
