@@ -52,7 +52,7 @@
     {
       "comment" : "Shorthand to block all youtube",
       "sourceApp" : "*",
-      "urlHost" : "youtube.com",
+      "urlHost" : "*.youtube.com",
       "urlPort" : 0,
       "action" : "drop"
     },
