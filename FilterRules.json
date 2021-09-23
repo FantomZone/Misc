@@ -98,7 +98,7 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
       "sourceApp" : "*",
