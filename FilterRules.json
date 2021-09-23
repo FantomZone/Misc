@@ -92,7 +92,7 @@
     },
     {
       "sourceApp" : "*",
-      "remoteHost" : "www.twitchy.com",
+      "remoteHost" : "*.twitchy.com",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
