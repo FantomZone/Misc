@@ -26,21 +26,21 @@
       "sourceApp" : "*",
       "urlHost" : "www.facebook.com",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "comment" : "Chrome goes to facebook.com no matter what",
       "sourceApp" : "*",
       "urlHost" : "facebook.com",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "comment" : "Chrome if it gets to facebook.com then goes to m.facebook.com",
       "sourceApp" : "*",
       "urlHost" : "m.facebook.com",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "comment" : "Shorthand to block all youtube",
@@ -98,7 +98,7 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
       "sourceApp" : "*",
@@ -129,6 +129,28 @@
       "socketType" : 1,
       "socketProtocol" : 6,
       "action": "drop"
+    },
+    {
+      "comment" : "All other https TCP",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:443",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "All other TCP",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
     },
     {
       "comment" : "All other TCP",
