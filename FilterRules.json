@@ -12,7 +12,7 @@
       "sourceApp" : "*",
       "urlHost" : "*.twitchy.com",
       "urlPort" : 0,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
       "comment" : "Allow private website access",
@@ -98,7 +98,7 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "sourceApp" : "*",
