@@ -150,18 +150,7 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "allow"
-    },
-    {
-      "comment" : "All other TCP",
-      "sourceApp" : "*",
-      "remoteHost" : "*",
-      "remoteEndpoint" : "*",
-      "localEndpoint" : "*",
-      "socketFamily" : 2,
-      "socketType" : 1,
-      "socketProtocol" : 6,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
       "comment" : "All other UDP",
