@@ -10,7 +10,7 @@
     {
       "comment" : "Allow twitchy web access",
       "sourceApp" : "*",
-      "urlHost" : "www.twitchy.com",
+      "urlHost" : "*.twitchy.com",
       "urlPort" : 0,
       "action" : "allow"
     },
