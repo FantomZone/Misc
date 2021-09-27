@@ -12,7 +12,7 @@
       "sourceApp" : "*",
       "urlHost" : "*.twitchy.com",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "comment" : "Allow private website access",
@@ -43,34 +43,37 @@
       "action" : "allow"
     },
     {
-      "comment" : "Shorthand to block all youtube",
+      "comment" : "Proper wildcarding of facebook.com prevents other websites from tracking",
       "sourceApp" : "*",
-      "urlHost" : "www.youtube.com",
+      "urlHost" : "*.facebook.com",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
-      "comment" : "Shorthand to block all youtube",
+      "comment" : "Shorthand to allow youtube",
       "sourceApp" : "*",
       "urlHost" : "*.youtube.com",
       "urlPort" : 0,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
+      "comment" : "This rule simply allow a quick check of whether remote rules were loaded",
       "sourceApp" : "*",
       "urlHost" : "www.filterrules.com",
       "urlPort" : 0,
       "action" : "allow"
     },
     {
+      "comment" : "All other website traffic is blocked",
       "sourceApp" : "*",
       "urlHost" : "*",
       "urlPort" : 0,
-      "action" : "allow"
+      "action" : "block"
     }
   ],
   "socketRules" : [
     {
+      "comment" : "Don't duplicate browser rules, especially if they conflict, except this as a check",
       "sourceApp" : "*",
       "remoteHost" : "www.google.com",
       "remoteEndpoint" : "*",
@@ -81,16 +84,7 @@
       "action" : "allow"
     },
     {
-      "sourceApp" : "*",
-      "remoteHost" : "192.168.50.151",
-      "remoteEndpoint" : "*",
-      "localEndpoint" : "*",
-      "socketFamily" : 2,
-      "socketType" : 1,
-      "socketProtocol" : 6,
-      "action" : "allow"
-    },
-    {
+      "comment" : "For example, here's a conflict",
       "sourceApp" : "*",
       "remoteHost" : "*.twitchy.com",
       "remoteEndpoint" : "*",
@@ -111,16 +105,7 @@
       "action" : "allow"
     },
     {
-      "sourceApp" : "*",
-      "remoteHost" : "13.249.139.42",
-      "remoteEndpoint" : "*",
-      "localEndpoint" : "*",
-      "socketFamily" : 2,
-      "socketType" : 1,
-      "socketProtocol" : 6,
-      "action" : "drop"
-    },
-    {
+      "comment" : "This had a podcast stream over TLS",
       "sourceApp" : "*",
       "remoteHost" : "13.249.139.42",
       "remoteEndpoint" : "*",
@@ -131,7 +116,7 @@
       "action": "drop"
     },
     {
-      "comment" : "All other https TCP",
+      "comment" : "Allow all non-blocked TLS traffic, including https (2,1,6 == TCP, 443 == TLS)",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*:443",
@@ -142,7 +127,18 @@
       "action" : "allow"
     },
     {
-      "comment" : "All other TCP",
+      "comment" : "Allow all non-blocked TLS traffic, including https (2,1,6 == TCP, 443 == TLS)",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:443",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Drop all other non-TLS traffic TCP for which there isn't an earlier rule",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -153,7 +149,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "All other UDP",
+      "comment" : "Block all other UDP",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -161,10 +157,10 @@
       "socketFamily" : 2,
       "socketType" : 2,
       "socketProtocol" : 17,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
-      "comment" : "All other socket traffic",
+      "comment" : "Block all other socket traffic",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -172,7 +168,7 @@
       "socketFamily" : 0,
       "socketType" : 0,
       "socketProtocol" : 0,
-      "action" : "allow"
+      "action" : "drop"
     }
   ]
 }
