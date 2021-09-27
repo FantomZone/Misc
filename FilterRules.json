@@ -68,7 +68,7 @@
       "sourceApp" : "*",
       "urlHost" : "*",
       "urlPort" : 0,
-      "action" : "block"
+      "action" : "drop"
     }
   ],
   "socketRules" : [
@@ -146,6 +146,72 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Allow DNS (2,2,17 == UDP, 55 == DNS",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:55",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Allow DNS (2,2,17 == UDP, 55 == DNS",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*:55",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Allow STUN and TFTP (2,2,17 == UDP, 3492 == TFTP/STUN",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:3492",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Allow DHCP (2,2,17 == UDP, 67 == DHCP server",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:67",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Allow MDNS (2,2,17 == UDP, 5353 == MDNS",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:5353",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Block all other UDP",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
       "action" : "drop"
     },
     {
