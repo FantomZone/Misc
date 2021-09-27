@@ -12,7 +12,7 @@
       "sourceApp" : "*",
       "urlHost" : "*.twitchy.com",
       "urlPort" : 0,
-      "action" : "allow"
+      "action" : "drop"
     },
     {
       "comment" : "Allow private website access",
@@ -84,7 +84,7 @@
       "action" : "allow"
     },
     {
-      "comment" : "For example, here's a conflict",
+      "comment" : "For example, here's a conflict, which results in twitchy being blocked",
       "sourceApp" : "*",
       "remoteHost" : "*.twitchy.com",
       "remoteEndpoint" : "*",
@@ -92,7 +92,7 @@
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "sourceApp" : "*",
