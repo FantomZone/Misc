@@ -15,9 +15,16 @@
       "action" : "drop"
     },
     {
-      "comment" : "Allow private website access",
+      "comment" : "Allow private testbed low website access",
       "sourceApp" : "*",
-      "urlHost" : "10.1.*",
+      "urlHost" : "10.1.11.2",
+      "urlPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow private testbed high website access",
+      "sourceApp" : "*",
+      "urlHost" : "10.1.13.2",
       "urlPort" : 0,
       "action" : "allow"
     },
