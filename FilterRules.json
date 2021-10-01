@@ -17,7 +17,7 @@
     {
       "comment" : "Allow private website access",
       "sourceApp" : "*",
-      "urlHost" : "192.168.50.151",
+      "urlHost" : "10.1.*",
       "urlPort" : 0,
       "action" : "allow"
     },
@@ -98,6 +98,17 @@
       "sourceApp" : "*",
       "remoteHost" : "www.facebook.com",
       "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow local websites for demo",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "10.1.*:80",
       "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
