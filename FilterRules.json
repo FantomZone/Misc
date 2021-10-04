@@ -102,6 +102,7 @@
       "action" : "allow"
     },
     {
+      "comment" : "Allow all facebook, where only 443 is really needed",
       "sourceApp" : "*",
       "remoteHost" : "www.facebook.com",
       "remoteEndpoint" : "*",
@@ -121,6 +122,61 @@
       "socketType" : 1,
       "socketProtocol" : 6,
       "action" : "allow"
+    },
+    {
+      "comment" : "First of five rules for seen traffic Apple Push/APN (facetime and others): TCP port 5223",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:5223",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Second of five rules for seen traffic MDNS/bonjour (local network multicast: UDP port 5353",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:5353",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Third of five rules for seen traffic DNS: UDP port 53",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:53",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Fourth of five rules for seen traffic NTP: UDP port 123",
+      "sourceApp" : "*",
+      "remoteHost" : "time.apple.com",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Fifth of five rules for seen traffic (placeholder): TCP port 5223",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*:5223",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "drop"
     },
     {
       "comment" : "This had a podcast stream over TLS",
@@ -145,18 +201,18 @@
       "action" : "allow"
     },
     {
-      "comment" : "Allow all non-blocked TLS traffic, including https (2,1,6 == TCP, 443 == TLS)",
+      "comment" : "Allow all non-blocked TLS traffic for local servers, including https (2,1,6 == TCP, 443 == TLS)",
       "sourceApp" : "*",
       "remoteHost" : "*",
-      "remoteEndpoint" : "*:443",
-      "localEndpoint" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*:443",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
       "action" : "allow"
     },
     {
-      "comment" : "Drop all other non-TLS traffic TCP for which there isn't an earlier rule",
+      "comment" : "Drop all other non-TLS TCP traffic for which there isn't an earlier rule",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -167,7 +223,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Allow DNS (2,2,17 == UDP, 55 == DNS",
+      "comment" : "Block DNS (2,2,17 == UDP, 55 == DNS",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*:55",
@@ -178,18 +234,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Allow DNS (2,2,17 == UDP, 55 == DNS",
-      "sourceApp" : "*",
-      "remoteHost" : "*",
-      "remoteEndpoint" : "*",
-      "localEndpoint" : "*:55",
-      "socketFamily" : 2,
-      "socketType" : 2,
-      "socketProtocol" : 17,
-      "action" : "drop"
-    },
-    {
-      "comment" : "Allow STUN and TFTP (2,2,17 == UDP, 3492 == TFTP/STUN",
+      "comment" : "Block STUN and TFTP (2,2,17 == UDP, 3492 == TFTP/STUN",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*:3492",
@@ -200,7 +245,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Allow DHCP (2,2,17 == UDP, 67 == DHCP server",
+      "comment" : "Block DHCP (2,2,17 == UDP, 67 == DHCP server",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*:67",
@@ -211,7 +256,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Allow MDNS (2,2,17 == UDP, 5353 == MDNS",
+      "comment" : "Block MDNS (2,2,17 == UDP, 5353 == MDNS",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*:5353",
