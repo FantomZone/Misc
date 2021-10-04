@@ -168,14 +168,14 @@
       "action" : "drop"
     },
     {
-      "comment" : "Fifth of five rules for seen traffic (placeholder): TCP port 5223",
+      "comment" : "Fifth of five rules for seen traffic SSDP: UDP port 1900",
       "sourceApp" : "*",
       "remoteHost" : "*",
-      "remoteEndpoint" : "*:5223",
+      "remoteEndpoint" : "*:1900",
       "localEndpoint" : "*",
       "socketFamily" : 2,
-      "socketType" : 1,
-      "socketProtocol" : 6,
+      "socketType" : 2,
+      "socketProtocol" : 17,
       "action" : "drop"
     },
     {
