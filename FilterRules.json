@@ -278,7 +278,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Block all other UDP",
+      "comment" : "Block all other UDP (family:IPv4, type:DGRAM, protocol:17)",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -286,6 +286,39 @@
       "socketFamily" : 2,
       "socketType" : 2,
       "socketProtocol" : 17,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Block all ICMP traffic (family:IPv4, type:RAW or DGRAM, protocol:1",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 3,
+      "socketProtocol" : 1,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Block all ICMP traffic (family:IPv4, type:DGRAM, protocol:1",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 1,
+      "action" : "drop"
+    },
+    {
+      "comment" : "Block all ICMP traffic (family:IPv4, type:ANY, protocol:1",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 0,
+      "socketProtocol" : 1,
       "action" : "drop"
     },
     {
