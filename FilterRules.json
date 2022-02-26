@@ -20,11 +20,18 @@
       "urlHost" : "10.1.11.2",
       "urlPort" : 0,
       "action" : "allow"
-    },
+    },    
     {
       "comment" : "Allow private testbed high website access",
       "sourceApp" : "*",
       "urlHost" : "10.1.13.2",
+      "urlPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow private testbed high website access",
+      "sourceApp" : "*",
+      "urlHost" : "*.freeboard.priv",
       "urlPort" : 0,
       "action" : "allow"
     },
@@ -60,6 +67,13 @@
       "comment" : "Shorthand to allow youtube",
       "sourceApp" : "*",
       "urlHost" : "*.youtube.com",
+      "urlPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Where the filter rules are updated",
+      "sourceApp" : "*",
+      "urlHost" : "*.github.com/FantomZone/Misc/",
       "urlPort" : 0,
       "action" : "allow"
     },
@@ -113,7 +127,7 @@
       "action" : "allow"
     },
     {
-      "comment" : "Allow local websites for demo",
+      "comment" : "Allow local websites for demo (TLS is covered by *:443 rule later)",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "10.1.*:80",
