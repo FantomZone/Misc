@@ -73,7 +73,7 @@
     {
       "comment" : "Where the filter rules are updated",
       "sourceApp" : "*",
-      "urlHost" : "*.github.com/FantomZone/Misc/",
+      "urlHost" : "*.github.com",
       "urlPort" : 0,
       "action" : "allow"
     },
@@ -108,6 +108,17 @@
       "comment" : "For example, here's a conflict, which results in twitchy being blocked",
       "sourceApp" : "*",
       "remoteHost" : "*.twitchy.com",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow all github, where only 443 should have been needed, but I kept getting blocked",
+      "sourceApp" : "*",
+      "remoteHost" : "www.github.com",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
