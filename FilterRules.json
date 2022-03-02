@@ -171,7 +171,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Third of five rules for seen traffic DNS: UDP port 53",
+      "comment" : "Third of five rules for seen traffic DNS: UDP port 53 (should drop, but needs allow for demo)",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*:53",
@@ -179,7 +179,7 @@
       "socketFamily" : 2,
       "socketType" : 2,
       "socketProtocol" : 17,
-      "action" : "drop"
+      "action" : "allow"
     },
     {
       "comment" : "Fourth of five rules for seen traffic NTP: UDP port 123",
@@ -226,11 +226,44 @@
       "action" : "allow"
     },
     {
-      "comment" : "Allow all non-blocked TLS traffic for local servers, including https (2,1,6 == TCP, 443 == TLS)",
+      "comment" : "Allow all non-blocked incoming TLS traffic for local servers, including https (2,1,6 == TCP, 443 == TLS)",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*:443",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow all TLS traffic for ForeFlight servers, including https (2,1,6 == TCP, 443 == TLS)",
+      "sourceApp" : "*",
+      "remoteHost" : "*.foreflight.com",
+      "remoteEndpoint" : "*:443",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow all TLS traffic for ForeFlight servers, including https (2,1,6 == TCP, 443 == TLS)",
+      "sourceApp" : "*",
+      "remoteHost" : "*.segment.com",
+      "remoteEndpoint" : "*:443",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow all TLS traffic for ForeFlight related servers, including https (2,1,6 == TCP, 443 == TLS)",
+      "sourceApp" : "*",
+      "remoteHost" : "*.segment.io",
+      "remoteEndpoint" : "*:443",
+      "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
       "socketProtocol" : 6,
@@ -314,7 +347,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Block all ICMP traffic (family:IPv4, type:RAW or DGRAM, protocol:1",
+      "comment" : "Block all ICMP traffic (family:IPv4, type:RAW or DGRAM, protocol:1); does not work",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -325,7 +358,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Block all ICMP traffic (family:IPv4, type:DGRAM, protocol:1",
+      "comment" : "Block all ICMP traffic (family:IPv4, type:DGRAM, protocol:1); does not work",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
@@ -336,7 +369,7 @@
       "action" : "drop"
     },
     {
-      "comment" : "Block all ICMP traffic (family:IPv4, type:ANY, protocol:1",
+      "comment" : "Block all ICMP traffic (family:IPv4, type:ANY, protocol:1); does not work",
       "sourceApp" : "*",
       "remoteHost" : "*",
       "remoteEndpoint" : "*",
