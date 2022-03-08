@@ -73,6 +73,13 @@
     {
       "comment" : "Where the filter rules are updated",
       "sourceApp" : "*",
+      "urlHost" : "*.githubusercontent.com",
+      "urlPort" : 0,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Where the filter rules are updated",
+      "sourceApp" : "*",
       "urlHost" : "*.github.com",
       "urlPort" : 0,
       "action" : "allow"
@@ -119,6 +126,17 @@
       "comment" : "Allow all github, where only 443 should have been needed, but I kept getting blocked",
       "sourceApp" : "*",
       "remoteHost" : "www.github.com",
+      "remoteEndpoint" : "*",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow all github, where only 443 should have been needed, but I kept getting blocked",
+      "sourceApp" : "*",
+      "remoteHost" : "raw.githubusercontent.com",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
