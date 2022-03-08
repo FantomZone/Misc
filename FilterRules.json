@@ -178,6 +178,28 @@
       "action" : "allow"
     },
     {
+      "comment" : "Allow VPN server traffic (IKE needs UDP)",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "freeboard.atcorp.priv",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow VPN server traffic (IKE need UDP)",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "192.168.229.201",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "allow"
+    },
+    {
       "comment" : "Allow local websites for demo (TLS is covered by *:443 rule later)",
       "sourceApp" : "*",
       "remoteHost" : "*",
