@@ -29,7 +29,7 @@
       "action" : "allow"
     },
     {
-      "comment" : "Allow private testbed high website access",
+      "comment" : "Allow private testbed website access",
       "sourceApp" : "*",
       "urlHost" : "*.freeboard.priv",
       "urlPort" : 0,
@@ -202,7 +202,7 @@
     {
       "comment" : "Allow MDM traffic",
       "sourceApp" : "*",
-      "remoteHost" : "jamfcloud.com",
+      "remoteHost" : "*.jamfcloud.com",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
@@ -213,7 +213,7 @@
     {
       "comment" : "Allow MDM traffic (UDP)",
       "sourceApp" : "*",
-      "remoteHost" : "jamfcloud.com",
+      "remoteHost" : "*.jamfcloud.com",
       "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
@@ -301,8 +301,8 @@
     {
       "comment" : "This had a podcast stream over TLS",
       "sourceApp" : "*",
-      "remoteHost" : "13.249.139.42",
-      "remoteEndpoint" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "13.249.139.42:*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
