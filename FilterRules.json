@@ -200,6 +200,39 @@
       "action" : "allow"
     },
     {
+      "comment" : "Allow MDM traffic",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "jamfcloud.com",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow MDM traffic (UDP)",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "jamfcloud.com",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 1,
+      "socketProtocol" : 6,
+      "action" : "allow"
+    },
+    {
+      "comment" : "Allow DNS (somehow the *:53 below didn't allow)",
+      "sourceApp" : "*",
+      "remoteHost" : "*",
+      "remoteEndpoint" : "10.1.15.2",
+      "localEndpoint" : "*",
+      "socketFamily" : 2,
+      "socketType" : 2,
+      "socketProtocol" : 17,
+      "action" : "allow"
+    },
+    {
       "comment" : "Allow local websites for demo (TLS is covered by *:443 rule later)",
       "sourceApp" : "*",
       "remoteHost" : "*",
