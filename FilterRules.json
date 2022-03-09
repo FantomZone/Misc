@@ -158,8 +158,8 @@
     {
       "comment" : "Allow VPN server traffic",
       "sourceApp" : "*",
-      "remoteHost" : "*",
-      "remoteEndpoint" : "freeboard.atcorp.priv",
+      "remoteHost" : "freeboard.atcorp.priv",
+      "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
@@ -180,8 +180,8 @@
     {
       "comment" : "Allow VPN server traffic (IKE needs UDP)",
       "sourceApp" : "*",
-      "remoteHost" : "*",
-      "remoteEndpoint" : "freeboard.atcorp.priv",
+      "remoteHost" : "freeboard.atcorp.priv",
+      "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 2,
@@ -202,8 +202,8 @@
     {
       "comment" : "Allow MDM traffic",
       "sourceApp" : "*",
-      "remoteHost" : "*",
-      "remoteEndpoint" : "jamfcloud.com",
+      "remoteHost" : "jamfcloud.com",
+      "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 2,
@@ -213,8 +213,8 @@
     {
       "comment" : "Allow MDM traffic (UDP)",
       "sourceApp" : "*",
-      "remoteHost" : "*",
-      "remoteEndpoint" : "jamfcloud.com",
+      "remoteHost" : "jamfcloud.com",
+      "remoteEndpoint" : "*",
       "localEndpoint" : "*",
       "socketFamily" : 2,
       "socketType" : 1,
